@@ -31,7 +31,7 @@ bitcore-node-divi start
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
 
-Please note that [Divi Core v0.12.1.x](https://github.com/divicoin/divi/tree/v0.12.1.x) will be downloaded automatically. Once completed the dashd binary should be placed into the &lt;divi-data-dir&gt; folder specified during node creation.
+Please note that [Divi Core v0.12.1.x](https://github.com/divicoin/divi/tree/v0.12.1.x) will be downloaded automatically. Once completed the divid binary should be placed into the &lt;divi-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 

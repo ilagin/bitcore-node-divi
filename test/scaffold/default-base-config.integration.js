@@ -15,7 +15,7 @@ describe('#defaultBaseConfig', function() {
     info.config.services.should.deep.equal(['bitcoind', 'web']);
     var bitcoind = info.config.servicesConfig.bitcoind;
     bitcoind.spawn.datadir.should.equal(home + '/.divi');
-    bitcoind.spawn.exec.should.equal(path.resolve(__dirname, process.env.HOME, './.divi/dashd'));
+    bitcoind.spawn.exec.should.equal(path.resolve(__dirname, process.env.HOME, './.divi/divid'));
   });
   it('be able to specify a network', function() {
     var info = defaultBaseConfig({network: 'testnet'});
