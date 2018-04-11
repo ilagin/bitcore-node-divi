@@ -59,8 +59,8 @@ We now will setup symlinks in `bitcore-node-divi` *(repeat this for any other mo
 cd node_modules
 rm -rf bitcore-lib
 ln -s ~/bitcore-lib
-rm -rf bitcoind-rpc-divi
-ln -s ~/bitcoind-rpc-divi
+rm -rf bitcoind-rpc-dash
+ln -s ~/bitcoind-rpc-dash
 ```
 
 And if you're compiling or developing bitcoin:
