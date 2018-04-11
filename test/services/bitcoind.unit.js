@@ -6,7 +6,7 @@ var path = require('path');
 var EventEmitter = require('events').EventEmitter;
 var should = require('chai').should();
 var crypto = require('crypto');
-var bitcore = require('bitcore-lib-dash');
+var bitcore = require('@dashevo/dashcore-lib');
 var _ = bitcore.deps._;
 var sinon = require('sinon');
 var proxyquire = require('proxyquire');
@@ -643,7 +643,7 @@ describe('Bitcoin Service', function() {
   });
 
   describe('#_wrapRPCError', function() {
-    it('will convert bitcoind-rpc-dash error object into JavaScript error', function() {
+    it('will convert bitcoind-rpc error object into JavaScript error', function() {
       var bitcoind = new BitcoinService(baseConfig);
       var error = bitcoind._wrapRPCError({message: 'Test error', code: -1});
       error.should.be.an.instanceof(errors.RPCError);

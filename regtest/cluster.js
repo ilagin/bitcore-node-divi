@@ -6,7 +6,7 @@ var spawn = require('child_process').spawn;
 
 var BitcoinRPC = require('bitcoind-rpc-divi');
 var rimraf = require('rimraf');
-var bitcore = require('bitcore-lib-dash');
+var bitcore = require('@dashevo/dashcore-lib');
 var chai = require('chai');
 var should = chai.should();
 
