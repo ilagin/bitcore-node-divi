@@ -6,7 +6,7 @@ var path = require('path');
 var index = require('..');
 var log = index.log;
 
-var p2p = require('bitcore-p2p-dash');
+var p2p = require('bitcore-p2p-divi');
 var Peer = p2p.Peer;
 var Messages = p2p.Messages;
 var chai = require('chai');
@@ -21,7 +21,7 @@ var bitcoind;
 var should = chai.should();
 var assert = chai.assert;
 var sinon = require('sinon');
-var BitcoinRPC = require('bitcoind-rpc-dash');
+var BitcoinRPC = require('bitcoind-rpc-divi');
 var transactionData = [];
 var blockHashes = [];
 var txs = [];
