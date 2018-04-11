@@ -6,7 +6,7 @@ root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="10.13"
-url="https://github.com/Divicoin/Divi/raw/master/releases/macos10.13.built.20180410/"
+url="https://github.com/Divicoin/Divi/raw/master/releases/macos10.13.built.20180411/"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
