@@ -63,7 +63,7 @@ describe('P2P Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Dash Core to initialize...');
+      log.info('Waiting for Divi Core to initialize...');
 
       bitcoind.start(function(err) {
         if (err) {
