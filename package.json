@@ -1,13 +1,13 @@
 {
-  "name": "bitcore-node-dash",
-  "description": "Full node with extended capabilities using Bitcore and Dash Core",
+  "name": "bitcore-node-divi",
+  "description": "Full node with extended capabilities using Bitcore and Divi Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.0.4",
   "main": "./index.js",
-  "repository": "git://github.com/dashpay/bitcore-node-dash.git",
-  "homepage": "https://github.com/dashpay/bitcore-node-dash",
+  "repository": "git://github.com/divicoin/bitcore-node-divi.git",
+  "homepage": "https://github.com/divicoin/bitcore-node-divi",
   "bugs": {
-    "url": "https://github.com/dashpay/bitcore-node-dash/issues"
+    "url": "https://github.com/divicoin/bitcore-node-divi/issues"
   },
   "contributors": [
     {
@@ -27,7 +27,7 @@
     }
   ],
   "bin": {
-    "bitcore-node-dash": "./bin/bitcore-node-dash"
+    "bitcore-node-divi": "./bin/bitcore-node-divi"
   },
   "scripts": {
     "preinstall": "./scripts/download",
@@ -39,12 +39,12 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "dash",
+    "divi",
     "dashd"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-dash": "^0.7.1",
+    "bitcoind-rpc-divi": "^0.7.1",
     "bitcore-lib-dash": "^0.13.20",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-dash": "^1.1.2",
+    "bitcore-p2p-divi": "^1.1.2",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
