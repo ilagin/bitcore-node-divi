@@ -94,7 +94,7 @@ describe('#add', function() {
       var callCount = 0;
       var oldPackage = {
         dependencies: {
-          '@dashevo/dashcore-lib': '^v0.13.17',
+          'divicore-lib': '^v0.13.17',
           'bitcore-node-divi': '^v0.2.0'
         }
       };

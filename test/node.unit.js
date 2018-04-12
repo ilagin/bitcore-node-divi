@@ -2,7 +2,7 @@
 
 var should = require('chai').should();
 var sinon = require('sinon');
-var bitcore = require('@dashevo/dashcore-lib');
+var bitcore = require('divicore-lib');
 var Networks = bitcore.Networks;
 var proxyquire = require('proxyquire');
 var util = require('util');
