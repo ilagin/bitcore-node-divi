@@ -2,7 +2,7 @@
   "name": "bitcore-node-divi",
   "description": "Full node with extended capabilities using Bitcore and Divi Core",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.0.18",
+  "version": "3.0.19",
   "main": "./index.js",
   "repository": "git://github.com/divicoin/bitcore-node-divi.git",
   "homepage": "https://github.com/divicoin/bitcore-node-divi",
