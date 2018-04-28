@@ -239,7 +239,7 @@ describe('Bitcoind Functionality', function() {
         var txhex = transactionData[i];
         var tx = new bitcore.Transaction();
         tx.fromString(txhex);
-        bitcoind.getRawTransaction(tx.hash, function(err, response) {
+        bitcoind.decodeRawTransaction(tx.hash, function(err, response) {
           if (err) {
             throw err;
           }
@@ -252,7 +252,7 @@ describe('Bitcoind Functionality', function() {
 
     it('will return error if the transaction does not exist', function(done) {
       var txid = '6226c407d0e9705bdd7158e60983e37d0f5d23529086d6672b07d9238d5aa618';
-      bitcoind.getRawTransaction(txid, function(err, response) {
+      bitcoind.decodeRawTransaction(txid, function(err, response) {
         should.exist(err);
         done();
       });
