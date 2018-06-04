@@ -6,22 +6,22 @@ root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="10.13"
-url="https://github.com/Divicoin/Divi/raw/master/releases/macos10.13.built.20180411/"
+url="https://github.com/Divicoin/Divi/raw/master/releases/"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
-        tarball_name="divicore-${version}-linux64.tar.gz"
+        zip_name="divi_ubuntu.zip"
     elif [ "${arch}" == "x86_32" ]; then
-        tarball_name="divicore-${version}-linux32.tar.gz"
+        zip_name="divi_ubuntu.zip"
     fi
 elif [ "${platform}" == "darwin" ]; then
-    tarball_name="macos${version}.tar.gz"
+    zip_name="divi_osx.zip"
 else
     echo "Divi binary distribution not available for platform and architecture"
     exit -1
 fi
 
-binary_url="${url}/${tarball_name}"
+binary_url="${url}/${zip_name}"
 shasums_url="${url}/sha256.macos${version}.txt"
 
 download_bitcoind() {
@@ -43,15 +43,15 @@ download_bitcoind() {
 
     if test $? -eq 0; then
         if [ "${is_curl}" = true ]; then
-            curl -L $binary_url > $tarball_name
+            curl -L $binary_url > $zip_name
             curl -L $shasums_url > SHA256SUMS.asc
         else
             wget $binary_url
             wget $shasums_url
         fi
-        if test -e "${tarball_name}"; then
+        if test -e "${zip_name}"; then
             echo "Unpacking divi distribution"
-            tar -xvzf $tarball_name
+            unzip $zip_name
             if test $? -eq 0; then
                 ln -sf "divicore-${version}/bin/divid"
                 return;
@@ -72,7 +72,7 @@ verify_download() {
         shasum_cmd="sha256sum"
     fi
 
-    download_sha=$(${shasum_cmd} "${root_dir}/bin/${tarball_name}" | awk '{print $1}')
+    download_sha=$(${shasum_cmd} "${root_dir}/bin/${zip_name}" | awk '{print $1}')
     expected_sha=$(cat "${root_dir}/bin/SHA256SUMS.asc" | grep "${tarball_name}" | awk '{print $1}')
     echo "Checksum (download): ${download_sha}"
     echo "Checksum (verified): ${expected_sha}"
