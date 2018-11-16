@@ -5,8 +5,8 @@ set -e
 root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
-version="10.13"
-url="https://github.com/Divicoin/Divi/raw/master/releases/"
+version="1.0.4"
+url="https://divi-blockchain.ams3.cdn.digitaloceanspaces.com/releases/${version}"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
